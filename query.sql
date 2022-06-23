@@ -11,7 +11,12 @@ JOIN inventory
 ON film.film_id = inventory.film_id
 JOIN rental
 ON inventory.inventory_id = rental.inventory_id
-WHERE name = 'Animation' OR name = 'Children' OR name = 'Comedy' OR name = 'Family' OR name = 'Classics' OR name = 'Music')
+WHERE name = 'Animation' 
+    OR name = 'Children' 
+    OR name = 'Comedy'
+    OR name = 'Family' 
+    OR name = 'Classics' 
+    OR name = 'Music')
 
 SELECT
     tab_1.title AS film_title,
@@ -30,7 +35,12 @@ JOIN film_category
 ON film.film_id = film_category.film_id
 JOIN category
 ON category.category_id = film_category.category_id
-WHERE name = 'Animation' OR name = 'Children' OR name = 'Comedy' OR name = 'Family' OR name = 'Classics' OR name = 'Music')
+WHERE name = 'Animation' 
+    OR name = 'Children' 
+    OR name = 'Comedy'
+    OR name = 'Family' 
+    OR name = 'Classics' 
+    OR name = 'Music')
 
 SELECT
 	tab_1.title,
@@ -53,7 +63,12 @@ JOIN film_category
 ON category.category_id = film_category.category_id
 JOIN film
 ON film.film_id = film_category.film_id
-WHERE category.name = 'Animation' OR category.name = 'Children' OR category.name = 'Comedy' OR category.name = 'Family' OR category.name = 'Classics' OR category.name = 'Music'
+WHERE name = 'Animation' 
+    OR name = 'Children' 
+    OR name = 'Comedy'
+    OR name = 'Family' 
+    OR name = 'Classics' 
+    OR name = 'Music'
 ORDER BY name, standard_quartile)
 
 SELECT 
